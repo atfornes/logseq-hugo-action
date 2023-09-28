@@ -9,7 +9,7 @@ Github action to publish logseq graph as a hugo static site
 
 ### `graph-name`
 
-**Required** The name of the logseq graph to export. Default is current path folder name: `(basename "$PWD")`.
+**Required** The name of the logseq graph to export. Default is current path folder name: `$(basename "$PWD")`.
 
 ### `options`
 
