@@ -1,0 +1,5 @@
+name: 'Logseq Huugo Action'
+description: 'Github action to publish logseq graph as a hugo static site.'
+runs:
+  using: 'node20'
+  main: 'index.js'

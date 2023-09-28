@@ -1,0 +1,12 @@
+{
+  "name": "logseq-hugo-action",
+  "version": "1.0.0",
+  "description": "Github action to publish logseq graph as a hugo static site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["logseq", "Hugo", "GitHub Action"],
+  "author": "Ámbar Tenorio Fornés",
+  "license": "GPLv3"
+}
