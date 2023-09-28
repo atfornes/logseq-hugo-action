@@ -1,5 +1,28 @@
 name: 'Logseq Huugo Action'
 description: 'Github action to publish logseq graph as a hugo static site.'
+inputs:
+  graph-name: # name of the logseq graph to export
+    description: 'Graph to export'
+    required: true
+    default: 'Logseq'
+  options: # additional params for logseq-to-markdown execution:
+    description: "additional params for logseq-to-markdown execution"
+    required: false
+    default: ""
+      # -o, --outputdir PATH                     ./out                Output Directory
+      # -e, --excluded-properties PROPERTY_LIST  #{:filters :public}  Comma separated list of properties that should be ignored
+      # -n, --trim-namespaces                    false                Trim Namespace Names
+      # -b, --keep-bullets                       false                Keep Outliner Bullets
+      # -t, --export-tasks                       false                Export Logseq Tasks
+      # -a, --export-all                         false                Export all Logseq Pages
+      # -r, --rm-brackets                        false                Remove Link Brackets
+      # -p, --prerender-diagrams                 false                Prerender Diagrams and export images
+      # -d, --delete-outputdir                   false                Delete output directory before exporting data
+      #     --time-pattern PATTERN               yyyy-MM-dd           Template Pattern for Time Strings
+      # -v, --verbose                            false                Verbose Output
+
 runs:
-  using: 'node20'
-  main: 'index.js'
+  using: "composite"
+  steps:
+    - run: logseq-to-markdown ${{ inputs.graph-name}}  ${{ inputs.options}}
+      shell: bash
