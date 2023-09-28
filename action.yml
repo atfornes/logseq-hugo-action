@@ -4,7 +4,7 @@ inputs:
   graph-name: # name of the logseq graph to export
     description: 'Graph to export'
     required: true
-    default: 'Logseq'
+    default: '(basename "$PWD")'
   options: # additional params for logseq-to-markdown execution:
     description: "additional params for logseq-to-markdown execution"
     required: false
