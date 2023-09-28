@@ -19,7 +19,7 @@ Additional params for logseq-to-markdown execution:
 ## Example usage
 
 ```yaml
-uses: actions/logseq-hugo-action
+uses: atfornes/logseq-hugo-action
 with:
   graph-name: 'MyJournal'
   options: "-o content"
