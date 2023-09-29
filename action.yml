@@ -22,7 +22,12 @@ inputs:
       # -v, --verbose                            false                Verbose Output
 
 runs:
-  using: "composite"
-  steps:
+  using: "node20"
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v2
+      with:
+        cache: npm
+    - run: npm install
+      shell: bash
     - run: logseq-to-markdown ${{ inputs.graph-name}}  ${{ inputs.options}}
       shell: bash
