@@ -22,7 +22,7 @@ inputs:
       # -v, --verbose                            false                Verbose Output
 
 runs:
-  using: "composite"
+  using: "node20"
   steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v2
