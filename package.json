@@ -12,6 +12,7 @@
   ],
   "author": "Ámbar Tenorio Fornés",
   "license": "GPLv3",
+  "main": "dist/index.mjs",
   "dependencies": {
     "@dom8509/logseq-to-markdown": "^0.4.1"
   }
