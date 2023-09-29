@@ -28,7 +28,7 @@ runs:
     - uses: actions/setup-node@v2
       with:
         cache: npm
-    - run: npm install
+    - run: npm install @dom8509/logseq-to-markdown
       shell: bash
     - run: logseq-to-markdown ${{ inputs.graph-name}}  ${{ inputs.options}}
       shell: bash
